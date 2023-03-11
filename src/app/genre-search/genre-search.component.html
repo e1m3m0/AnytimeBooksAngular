@@ -1,0 +1,44 @@
+<!-- Content Section -->
+<main>
+  <section class="book-section">
+    <section id="information" class="is-flex is-flex-direction-column">
+      <div
+        id="formDiv"
+        class="is-flex is-justify-content-space-evenly has-background-primary p-6"
+      >
+        <form
+          id="genreForm"
+          class="select is-rounded is-flex is-flex-direction-column is-justify-content-center m-5 p-5"
+        >
+          <label class="m-3 has-text-white">
+            What would you like to read?</label
+          >
+          <select name="types" id="bookType" class="m-3">
+            <option value="" disabled selected hidden>Make a selection</option>
+            <option
+              *ngFor="let genre of formGenreList"
+              value="{{ genre.list_name_encoded }}"
+            >
+              {{ genre.display_name }}
+            </option>
+          </select>
+          <button
+            id="typeSubmit"
+            class="button has-background-info has-text-white m-1"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <!-- container  -->
+      <div
+        id="viewSelection"
+        class="columns is-centered is-full is-multiline is-flex is-justify-content-center is-flex-direction-row is-flex-wrap-wrap p-5 m-5"
+      >
+        <!-- DOM manipulation  -->
+      </div>
+      <!-- Select dropdown  -->
+    </section>
+  </section>
+</main>
+

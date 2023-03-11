@@ -1,11 +1,59 @@
-<div>Hello Test</div>
+<!-- <app-navbar></app-navbar> -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- anytime books image  -->
+  <div class="navbar-brand">
+    <a class="navbar-item" href="./index.html">
+      <img
+        src="assets/images/AnytimeBooksLogoCase.png"
+        alt="anytime logo"
+        style="max-height: 75px; background-size: cover"
+      />
+    </a>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasic"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- links  -->
+  <div id="navbarBasic" class="navbar-menu has-dropdown">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-danger" routerLink="/">
+            <strong>Home</strong>
+          </a>
+          <a class="button is-primary" routerLink="/search">
+            <strong>Search</strong>
+          </a>
+          <a class="button is-info" routerLink="/books">
+            <!-- Insert state of reading list from local storage. count of list added -->
+            <strong>Reading list: 0</strong>
+          </a>
+          <a class="button is-warning" routerLink="/about">
+            <strong>About</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<div id="formDiv" class=" is-flex is-justify-content-space-evenly has-background-primary p-6 ">
-    <form id="genreForm" class=" select is-rounded is-flex is-flex-direction-column is-justify-content-center m-5 p-5 ">
-        <label class="m-3 has-text-white"> What would you like to read?</label> <select name="types" id="bookType"
-            class="m-3">
-            <option value="" disabled selected hidden> Make a selection </option>
-            <option *ngFor="let genre of formGenreList" value="{{genre.list_name_encoded}}">{{genre.display_name}}</option>
-        </select> <button id="typeSubmit" class="button has-background-info has-text-white m-1"> Submit </button>
-    </form>
-</div>
+<router-outlet></router-outlet>
+
+<footer class="footer has-background-white">
+  <div class="content has-text-centered has-text-success has-text-weight-bold">
+    <p>
+      <a class="footerImage is-9by1">
+        <img src="assets/images/FooterCropped.png" alt="footer image" />
+      </a>
+      Anytime Books by: ©2021 Gjonbalaj, Maki, Mateo, Powers, Winslow
+    </p>
+  </div>
+</footer>
