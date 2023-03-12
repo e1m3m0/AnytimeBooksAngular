@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { GenreListGeneratorService } from './genre-list-generator.service';
 import { GenreList, GenreListWhole } from '../../models/Genrelist'
 import { map } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-genre-search',
@@ -10,8 +11,9 @@ import { map } from 'rxjs';
 })
 export class GenreSearchComponent {
   formGenreList: GenreList[] = [];
+  model:any;
 
-  constructor(private genreListService: GenreListGeneratorService) {}
+  constructor(private genreListService: GenreListGeneratorService, private router: Router) {}
 
   ngOnInit() {
     this.genreListService
@@ -38,6 +40,9 @@ export class GenreSearchComponent {
       });
   }
 
+  submitGenre(genre){
+    this.router.navigate(['/bookstosave', genre])    
+  }
   
 
 }

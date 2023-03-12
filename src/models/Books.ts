@@ -1,5 +1,5 @@
 export class Books {
-  isbn10: number;
+  isbn10: any;
   author: string;
   title: string;
   cover: string;

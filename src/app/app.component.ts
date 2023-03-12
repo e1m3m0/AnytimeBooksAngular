@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { GenreListGeneratorService } from './genre-search/genre-list-generator.service';
 
 
@@ -9,12 +9,19 @@ import { GenreListGeneratorService } from './genre-search/genre-list-generator.s
 })
 export class AppComponent {
   title = 'AnytimeBooksAngular';
+  @ViewChild('navBurger') navBurger: ElementRef;
+  @ViewChild('navMenu') navMenu: ElementRef;
 
   constructor () {}
 
   ngOnInit () {
 
   }
+
+  toggleNavbar() {
+    this.navBurger.nativeElement.classList.toggle('is-active');
+    this.navMenu.nativeElement.classList.toggle('is-active');
+}
 
 
 }

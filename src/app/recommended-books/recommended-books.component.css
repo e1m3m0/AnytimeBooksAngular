@@ -1,0 +1,86 @@
+
+.book-container {
+	position: relative;
+	width: 250px !important;
+	min-width: 230px !important;
+	max-width: 250px;
+	transition: transform 0.2s, box-shadow 0.2s;
+	box-shadow: -1px 1px 4px rgb(70, 70, 70);
+	overflow: hidden;
+	border: 1px solid rgb(255, 56, 96);
+}
+
+.book-container:hover {
+	transform: scale(1.1);
+	box-shadow: -10px 10px 15px rgb(34, 34, 34);
+}
+
+.book-container::before {
+	content: "";
+	position: absolute;
+	background-color: rgb(255, 56, 96);
+	inset: -21px 13px;
+	height: 108px;
+	width: 15px;
+	transition: height 0.2s;
+	transform: rotate(35deg);
+}
+
+
+.heart-red {
+	background-color: rgb(32, 156, 238);
+	cursor: pointer;
+	display: inline-block;
+	height: 21px;
+	margin: 0 10px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	transform: rotate(-45deg);
+	width: 20px;
+	transition: background-color 0.2s;
+}
+.heart-red:hover {
+	background-color: rgb(255, 56, 96);
+}
+
+.heart-red:before,
+.heart-red:after {
+	content: "";
+	background-color: rgb(32, 156, 238);
+	border-radius: 50%;
+	height: 20px;
+	position: absolute;
+	width: 20px;
+	transition: background-color 0.2s;
+}
+
+.heart-red:before {
+	top: -13px;
+	left: 0;
+}
+
+.heart-red:after {
+	left: 13px;
+	top: 1px;
+}
+
+.heart-red:hover::before,
+.heart-red:hover::after {
+	background-color: rgb(255, 56, 96);
+}
+
+.title {
+	font-weight: bolder;
+	/* color: white; */
+}
+
+.author {
+	font-style: italic;
+}
+
+.snippet p {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+}
+

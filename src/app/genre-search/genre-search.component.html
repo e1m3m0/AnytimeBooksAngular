@@ -1,4 +1,5 @@
 <!-- Content Section -->
+<app-herosection></app-herosection>
 <main>
   <section class="book-section">
     <section id="information" class="is-flex is-flex-direction-column">
@@ -7,14 +8,21 @@
         class="is-flex is-justify-content-space-evenly has-background-primary p-6"
       >
         <form
+          #selectGenreForm="ngForm"
+          (ngSubmit)="submitGenre(selectGenreForm.value.genre)"
           id="genreForm"
           class="select is-rounded is-flex is-flex-direction-column is-justify-content-center m-5 p-5"
         >
           <label class="m-3 has-text-white">
             What would you like to read?</label
           >
-          <select name="types" id="bookType" class="m-3">
-            <option value="" disabled selected hidden>Make a selection</option>
+          <select
+            (ngModel)="(model.genre)"
+            name="genre"
+            id="bookType"
+            class="m-3"
+          >
+            <option value=""selected>Make a selection</option>
             <option
               *ngFor="let genre of formGenreList"
               value="{{ genre.list_name_encoded }}"
@@ -23,7 +31,7 @@
             </option>
           </select>
           <button
-            id="typeSubmit"
+            type="submit"
             class="button has-background-info has-text-white m-1"
           >
             Submit
@@ -41,4 +49,3 @@
     </section>
   </section>
 </main>
-

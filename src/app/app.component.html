@@ -1,47 +1,52 @@
-<!-- <app-navbar></app-navbar> -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <!-- anytime books image  -->
   <div class="navbar-brand">
-    <a class="navbar-item" href="./index.html">
+    <a class="navbar-item" routerLink="/">
       <img
         src="assets/images/AnytimeBooksLogoCase.png"
         alt="anytime logo"
         style="max-height: 75px; background-size: cover"
       />
     </a>
-    <a
-      role="button"
-      class="navbar-burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarBasic"
-    >
+
+    <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <!-- links  -->
-  <div id="navbarBasic" class="navbar-menu has-dropdown">
+
+  <div id="navbarBasicExample" class="navbar-menu" #navMenu>
     <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-danger" routerLink="/">
-            <strong>Home</strong>
+      <div class="buttons">
+        <a class="button is-danger" routerLink="/">
+          <strong>Home</strong>
+        </a>
+        <a class="button is-primary" routerLink="/search">
+          <strong>Search</strong>
+        </a>
+        <a class="button is-info" routerLink="/books">
+          <strong>Reading list: state reader</strong>
+        </a>
+      
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="button is-warning">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/about">
+            About
           </a>
-          <a class="button is-primary" routerLink="/search">
-            <strong>Search</strong>
-          </a>
-          <a class="button is-info" routerLink="/books">
-            <!-- Insert state of reading list from local storage. count of list added -->
-            <strong>Reading list: 0</strong>
-          </a>
-          <a class="button is-warning" routerLink="/about">
-            <strong>About</strong>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
           </a>
         </div>
       </div>
     </div>
+    </div>
+
   </div>
 </nav>
 

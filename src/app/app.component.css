@@ -1,0 +1,10 @@
+.footerImage {
+	max-height: 75%;
+}
+
+@media screen and (max-width: 575px) {
+	#heroSection {
+		background-image: url(../assets/images/HeroMobile.png);
+		background-size: 99%;
+	}
+}
