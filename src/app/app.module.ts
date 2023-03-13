@@ -11,6 +11,7 @@ import { routingTable } from './routes';
 import { HerosectionComponent } from './genre-search/herosection.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RecommendedBooksComponent } from './recommended-books/recommended-books.component';
+import { ReadinglistComponent } from './readinglist/readinglist.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RecommendedBooksComponent } from './recommended-books/recommended-books
     HerosectionComponent,
     AboutusComponent,
     RecommendedBooksComponent,
+    ReadinglistComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable),

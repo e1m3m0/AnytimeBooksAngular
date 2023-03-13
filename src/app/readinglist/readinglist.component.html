@@ -1,9 +1,9 @@
-<div
+<div 
   id="viewSelection"
   class="columns is-centered is-full is-multiline is-flex is-justify-content-center is-flex-direction-row is-flex-wrap-wrap p-5 m-5"
 >
   <div
-    *ngFor="let book of books"
+    *ngFor="let book of readingState"
     id="{{book.primary_isbn10}}" 
     class="book-container is-flex is-flex-direction-row m-5 is-align-content-baseline is-justify-content-center is-flex-wrap-wrap column has-text-dark"
     >
@@ -21,6 +21,5 @@
     <div class="snippet my-5 has-text-centered">
       <p>{{book.description}}</p>
     </div>
-    <button (click)="testsplice(book.primary_isbn10)" class="btn is-warning">test</button>
   </div>
 </div>

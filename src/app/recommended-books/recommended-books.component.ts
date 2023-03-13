@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { Books } from 'src/models/Books';
-import { ActivatedRoute, Route } from '@angular/router';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { GenreListGeneratorService } from '../genre-search/genre-list-generator.service';
 
 
@@ -11,6 +10,7 @@ import { GenreListGeneratorService } from '../genre-search/genre-list-generator.
 })
 export class RecommendedBooksComponent {
 books: any; 
+@Output() bookATF = new EventEmitter()
 
 constructor(private route: ActivatedRoute, private http: GenreListGeneratorService) {}
 
@@ -20,6 +20,18 @@ ngOnInit(){
       this.books = data.results.books
       })
     })
+}
+
+testsplice(id){
+
+  for (let i = 0; i < this.books.length; i++) {
+    if (this.books[i].primary_isbn10 == id){
+      let testArr = this.books.slice(i,i+1)
+      console.log(testArr)
+
+    }
+    
+  }
 }
 }
 
