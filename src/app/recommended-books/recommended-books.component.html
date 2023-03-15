@@ -21,6 +21,6 @@
     <div class="snippet my-5 has-text-centered">
       <p>{{book.description}}</p>
     </div>
-    <button (click)="testsplice(book.primary_isbn10)" class="btn is-warning">test</button>
+    <button *ngIf="!this.readingState.checkStatus(book.primary_isbn10)"(click)="testsplice(book.primary_isbn10)" class="btn is-warning">test</button>
   </div>
 </div>

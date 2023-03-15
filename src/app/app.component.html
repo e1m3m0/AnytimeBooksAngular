@@ -25,7 +25,7 @@
           <strong>Search</strong>
         </a>
         <a class="button is-info" routerLink="/savedbooks">
-          <strong>Reading list: {{readingState.length}}</strong>
+          <strong>Reading list:0</strong>
         </a>
       
 
@@ -50,7 +50,10 @@
   </div>
 </nav>
 
+<!-- <app-readinglist [readingState]="readingState"></app-readinglist> -->
 <router-outlet></router-outlet>
+
+<button (click)="testLocal()" class="button is-warning">Test local storage</button>
 
 <footer class="footer has-background-white">
   <div class="content has-text-centered has-text-success has-text-weight-bold">

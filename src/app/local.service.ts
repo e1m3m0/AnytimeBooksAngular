@@ -5,7 +5,6 @@ import  *  as CryptoJS from  'crypto-js';
   providedIn: 'root'
 })
 export class LocalService {
-  key:any
 
   constructor() { }
   public saveData(key: string, value: string) {

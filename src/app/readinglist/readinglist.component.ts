@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ReadingliststateService } from '../readingliststate.service';
 
 @Component({
   selector: 'app-readinglist',
@@ -6,10 +8,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./readinglist.component.css']
 })
 export class ReadinglistComponent {
-  @Input() readingState;
+  readingList: any
+  
+  
+  constructor(private activatedRoute:ActivatedRoute, public readingState: ReadingliststateService){}
 
   ngOnInit() {
-    console.log(this.readingState)
+    this.readingList = this.readingState.readingState
+  
   }
 
 
