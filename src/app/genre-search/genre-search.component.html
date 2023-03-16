@@ -1,4 +1,4 @@
-<!-- Content Section -->
+
 <app-herosection></app-herosection>
 <main>
   <section class="book-section">
@@ -22,7 +22,7 @@
             id="bookType"
             class="m-3"
           >
-            <option value=""selected>Make a selection</option>
+            <option value=""selected hidden disabled>Make a selection</option>
             <option
               *ngFor="let genre of formGenreList"
               value="{{ genre.list_name_encoded }}"
@@ -38,14 +38,13 @@
           </button>
         </form>
       </div>
-      <!-- container  -->
+
       <div
         id="viewSelection"
         class="columns is-centered is-full is-multiline is-flex is-justify-content-center is-flex-direction-row is-flex-wrap-wrap p-5 m-5"
       >
-        <!-- DOM manipulation  -->
       </div>
-      <!-- Select dropdown  -->
+
     </section>
   </section>
 </main>

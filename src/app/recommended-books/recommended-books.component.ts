@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GenreListGeneratorService } from '../genre-search/genre-list-generator.service';
 import { ReadingliststateService } from '../readingliststate.service';
@@ -10,7 +10,6 @@ import { ReadingliststateService } from '../readingliststate.service';
 })
 export class RecommendedBooksComponent {
 books: any; 
-@Output() bookATF = new EventEmitter()
 
 constructor(private route: ActivatedRoute, private http: GenreListGeneratorService, public readingState: ReadingliststateService) {}
 
@@ -22,7 +21,7 @@ ngOnInit(){
     })
 }
 
-testsplice(id){
+saveBook(id){
 
   for (let i = 0; i < this.books.length; i++) {
     if (this.books[i].primary_isbn10 == id){

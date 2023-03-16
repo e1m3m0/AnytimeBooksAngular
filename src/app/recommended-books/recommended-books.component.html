@@ -4,9 +4,9 @@
 >
   <div
     *ngFor="let book of books"
-    id="{{book.primary_isbn10}}" 
-    class="book-container is-flex is-flex-direction-row m-5 is-align-content-baseline is-justify-content-center is-flex-wrap-wrap column has-text-dark"
+    class="book-container m-5"
     >
+    <div class="is-flex-direction-row">
     <img
       class="book-cover is-text-align-center"
       src="{{book.book_image}}"
@@ -21,6 +21,9 @@
     <div class="snippet my-5 has-text-centered">
       <p>{{book.description}}</p>
     </div>
-    <button *ngIf="!this.readingState.checkStatus(book.primary_isbn10)"(click)="testsplice(book.primary_isbn10)" class="btn is-warning">test</button>
+  </div>
+    <div class="is-align-items-self-end">
+    <button *ngIf="!this.readingState.checkStatus(book.primary_isbn10)"(click)="saveBook(book.primary_isbn10)" class="button is-warning">Save Book</button>
+</div>
   </div>
 </div>

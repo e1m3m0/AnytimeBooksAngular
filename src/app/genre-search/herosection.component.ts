@@ -6,16 +6,18 @@ import { Component } from '@angular/core';
 <section
   id="heroSection"
   class="section container.is-medium"
-  style="
+></section>
+  `,
+  styles: [
+    `
+    #heroSection {
     background-image: url(/assets/images/Hero.png);
     background-position: center;
     background-size: 75%;
     background-repeat: no-repeat;
     height: 350px;
-  "
-></section>
-  `,
-  styles: [
+    }
+    `
   ]
 })
 export class HerosectionComponent {

@@ -7,19 +7,24 @@
     id="{{book.primary_isbn10}}" 
     class="book-container is-flex is-flex-direction-row m-5 is-align-content-baseline is-justify-content-center is-flex-wrap-wrap column has-text-dark"
     >
-    <img
-      class="book-cover is-text-align-center"
-      src="{{book.book_image}}"
-      alt="{{book.title}}'s cover"
-    />
-    <div class="p-3 title is-full has-text-centered is-capitalized">
-      <h2 class="is-full">{{book.title}}</h2>
-    </div>
-    <div class="p-3 author is-full has-text-centered is-capitalized">
-      <h3>{{book.author}}</h3>
-    </div>
-    <div class="snippet my-5 has-text-centered">
-      <p>{{book.description}}</p>
-    </div>
+    <a [routerLink]="['/book', book.primary_isbn10]" >
+<div>
+  <img
+  class="book-cover is-text-align-center"
+  src="{{book.book_image}}"
+  alt="{{book.title}}'s cover"
+/>
+<div class="p-3 title is-full has-text-centered is-capitalized">
+  <h2 class="is-full">{{book.title}}</h2>
+</div>
+<div class="p-3 author is-full has-text-centered is-capitalized">
+  <h3>{{book.author}}</h3>
+</div>
+<div class="snippet my-5 has-text-centered">
+  <p>{{book.description}}</p>
+</div>
+</div>
+</a>
   </div>
+
 </div>

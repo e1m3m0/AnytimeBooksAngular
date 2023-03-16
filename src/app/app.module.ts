@@ -12,6 +12,9 @@ import { HerosectionComponent } from './genre-search/herosection.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RecommendedBooksComponent } from './recommended-books/recommended-books.component';
 import { ReadinglistComponent } from './readinglist/readinglist.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { DetailedbookComponent } from './detailedbook/detailedbook.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { ReadinglistComponent } from './readinglist/readinglist.component';
     AboutusComponent,
     RecommendedBooksComponent,
     ReadinglistComponent,
+    NavbarComponent,
+    FooterComponent,
+    DetailedbookComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable),

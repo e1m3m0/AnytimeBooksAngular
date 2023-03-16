@@ -7,7 +7,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-genre-search',
   templateUrl: './genre-search.component.html',
-  styleUrls: []
+  styles: [
+    `
+    #genreForm::after {
+	content: none !important;
+}
+
+#genreForm > * {
+	width: 450px;
+}
+form button {
+	width: fit-content !important;
+}
+
+label {
+	width: fit-content !important;
+}`
+  ]
 })
 export class GenreSearchComponent {
   formGenreList: GenreList[] = [];
