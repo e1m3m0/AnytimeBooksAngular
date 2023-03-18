@@ -24,16 +24,13 @@ import { ReadingliststateService } from '../readingliststate.service';
   <div id="navbarBasicExample" class="navbar-menu" #navMenu>
     <div class="navbar-end">
       <div class="buttons">
-        <a class="button is-danger" routerLink="/">
-          <strong>Home</strong>
-        </a>
         <a class="button is-primary" routerLink="/search">
           <strong>Search</strong>
         </a>
         <a class="button is-info" routerLink="/savedbooks">
           <strong>Reading List: {{this.readingState.readingState.length}}</strong>
         </a>
-                <a class="button is-warning" routerLink="/about">
+                <a class="button is-warning mr-3" routerLink="/about">
           <strong>About</strong>
         </a>
     </div>

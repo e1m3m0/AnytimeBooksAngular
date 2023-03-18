@@ -26,54 +26,9 @@
 	transform: rotate(35deg);
 }
 
-
-.heart-red {
-	background-color: rgb(32, 156, 238);
-	cursor: pointer;
-	display: inline-block;
-	height: 21px;
-	margin: 0 10px;
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-	transform: rotate(-45deg);
-	width: 20px;
-	transition: background-color 0.2s;
-}
-.heart-red:hover {
-	background-color: rgb(255, 56, 96);
-}
-
-.heart-red:before,
-.heart-red:after {
-	content: "";
-	background-color: rgb(32, 156, 238);
-	border-radius: 50%;
-	height: 20px;
-	position: absolute;
-	width: 20px;
-	transition: background-color 0.2s;
-}
-
-.heart-red:before {
-	top: -13px;
-	left: 0;
-}
-
-.heart-red:after {
-	left: 13px;
-	top: 1px;
-}
-
-.heart-red:hover::before,
-.heart-red:hover::after {
-	background-color: rgb(255, 56, 96);
-}
-
-.title {
+/* .title {
 	font-weight: bolder;
-	/* color: white; */
-}
+} */
 
 .author {
 	font-style: italic;

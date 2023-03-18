@@ -14,11 +14,12 @@ from './local.service';
 
   addToReadingList(book) {
     this.readingState.push(book[0]) 
-    this.saveToLocalStorage(this.readingState)
+    this.saveToLocalStorage()
   }
 
-  saveToLocalStorage(value) {
-    this.localStore.saveData('AnytimeBooksKey', JSON.stringify(value))
+  saveToLocalStorage() {
+    this.localStore.clearData
+    this.localStore.saveData('AnytimeBooksKey', JSON.stringify(this.readingState))
   }
 
   checkStatus(id:number) {

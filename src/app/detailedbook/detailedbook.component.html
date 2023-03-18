@@ -1,16 +1,33 @@
-<div>
-  {{detailedBook.author}}
-  {{detailedBook.title}}
+<div class="columns is-desktop mb-1">
+  <div class="column is-half-desktop is-full-tablet is-full-mobile has-background-primary  has-text-centered p-3 is-align-content-center">
+    <div class="m-5 is-align-self-center">
+      <img
+        src="{{ detailedBook.book_image }}"
+        alt="{{ detailedBook.title }}'s book cover"
+      />
+    </div>
+  </div>
+  <div class="column has-background-primary p-3">
+    <p class="title is-4 has-text-centered pt-5">Book information</p>
+    <div class="has-background-primary is-half m-5">
+      <p>Author: <span class="has-text-weight-bold">{{ detailedBook.author }}</span></p>
+      <p>Title: <span class="has-text-weight-bold">{{ detailedBook.title | titlecase }}</span></p>
+      <p *ngIf="detailedBook.subtitle">Subtitle: <span class="has-text-weight-bold">{{ detailedBook.subtitle }}</span></p>
+      <p>Description: <span class="has-text-weight-bold">{{ detailedBook.description || "Description not available" }}</span></p>
+      <p *ngIf="detailedBook.pageCount !== 0">Pages: <span class="has-text-weight-bold">{{detailedBook.pageCount}} pages</span></p>
+      <p>Publisher: <span class="has-text-weight-bold">{{ detailedBook.publisher }}</span></p>
+      <p *ngIf="detailedBook.rating">Google Books' Rating: <span class="has-text-weight-bold">{{detailedBook.rating}}</span></p>
 
-
-
-
-
-
-
-
-
-
-
-
+      <p class="title is-4 has-text-centered pt-5">Where to buy</p>
+      <ul *ngFor="let link of detailedBook.buy_links">
+        <li>
+          <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="is-align-self-flex-end">
+    <button (click)='removeFromList(detailedBook.primary_isbn10)' class="button is-warning is-pulled-right mr-5">Remove from Reading List</button>
+  </div>
+  </div>
 </div>
+

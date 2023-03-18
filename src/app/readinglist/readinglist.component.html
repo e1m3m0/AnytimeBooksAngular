@@ -1,7 +1,13 @@
+<div class="is-full title is-1 has-text-centered pt-3 pb-0">
+  <p> Reading List
+  </p>
+  </div>
+
 <div 
   id="viewSelection"
   class="columns is-centered is-full is-multiline is-flex is-justify-content-center is-flex-direction-row is-flex-wrap-wrap p-5 m-5"
 >
+
   <div
     *ngFor="let book of readingList"
     id="{{book.primary_isbn10}}" 
@@ -14,8 +20,8 @@
   src="{{book.book_image}}"
   alt="{{book.title}}'s cover"
 />
-<div class="p-3 title is-full has-text-centered is-capitalized">
-  <h2 class="is-full">{{book.title}}</h2>
+<div class="p-3 is-full has-text-centered">
+  <h2 class="is-full title is-4">{{book.title | titlecase}}</h2>
 </div>
 <div class="p-3 author is-full has-text-centered is-capitalized">
   <h3>{{book.author}}</h3>

@@ -130,6 +130,7 @@ import { Component } from '@angular/core';
                 Full-Stack Web Devloper with skills in HTML Accessibility, CSS,
                 JavaScript and famous CSS Frameworks like Bootstrap and Bulma, JQuery, APIs, React, and more.
               </p>
+              <br>
             </div>
             <div>
               <h4 class="is-size-5 has-text-weight-bold pt-3">Contact Me</h4>
@@ -157,7 +158,6 @@ import { Component } from '@angular/core';
                     >LinkedIn</a
                   >  
                 </div>
-                <p class="pt-0 pb-3">Location: Wethersfield, CT</p>
               </address>
             </div>
           </div>

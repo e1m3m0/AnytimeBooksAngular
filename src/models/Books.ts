@@ -2,6 +2,7 @@ export class Books {
   isbn10: any;
   author: string;
   title: string;
+  subtitle: string;
   cover: string;
   description: string;
   extDescription: string;
@@ -12,4 +13,5 @@ export class Books {
   }];
   publisher: string;
   saved: boolean;
+  rating: number;
 }

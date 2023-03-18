@@ -1,28 +1,25 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-footer', 
   template: `
-<footer class="footer has-background-white">
-  <div class="content has-text-centered has-text-success has-text-weight-bold">
-    <p>
-      <a class="footerImage is-9by1">
-        <img src="assets/images/FooterCropped.png" alt="footer image" />
-      </a>
-      Anytime Books by: ©2021 Gjonbalaj, Maki, Mateo, Powers, Winslow
-    </p>
-  </div>
-</footer>
-
-  `,
-  styles: [
-    `
-    .footerImage {
-	max-height: 45%;
-}
-    `
-  ]
+    <footer class=" has-background-white">
+      <div class="footer content has-text-centered has-text-success has-text-weight-bold">
+        <a class="has-text-success"routerLink="/about">
+          <p>Anytime Books by: ©2021 Gjonbalaj, Maki, Mateo, Powers, Winslow</p>
+        </a>
+      </div>
+    </footer>
+  `, 
+  styles: [`
+    .footer {
+      box-shadow: 1px 1px 10px rgb(46, 46, 46);
+      background-image: url(../../assets/images/FooterCropped.png);
+      background-size: cover;
+      background-position: center;
+    background-repeat: no-repeat;
+    }
+  `]
 })
-export class FooterComponent {
 
-}
+export class FooterComponent {}
