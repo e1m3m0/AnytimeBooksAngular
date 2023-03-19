@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 
-@Component({selector: 'app-detailedbook', templateUrl: './detailedbook.component.html', styleUrls: ['./detailedbook.component.css']})
+@Component({selector: 'app-detailedbook', templateUrl: './detailedbook.component.html', styleUrls: []})
 export class DetailedbookComponent {
   detailedBook;
 
