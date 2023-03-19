@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
     #heroSection {
     background-image: url(/assets/images/Hero.png);
     background-position: center;
-    background-size: 99%;
+    background-size: 90%;
     background-repeat: no-repeat;
     height: 350px;
     }

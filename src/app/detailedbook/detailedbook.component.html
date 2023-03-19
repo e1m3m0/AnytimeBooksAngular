@@ -2,6 +2,7 @@
   <div class="column is-half-desktop is-full-tablet is-full-mobile has-background-primary  has-text-centered p-3 is-align-content-center">
     <div class="m-5 is-align-self-center">
       <img
+        class="is-full"
         src="{{ detailedBook.book_image }}"
         alt="{{ detailedBook.title }}'s book cover"
       />
@@ -25,8 +26,9 @@
         </li>
       </ul>
     </div>
-    <div class="is-align-self-flex-end">
-    <button (click)='removeFromList(detailedBook.primary_isbn10)' class="button is-warning is-pulled-right mr-5">Remove from Reading List</button>
+    <div class="is-flex-direction-row">
+    <button (click)="goBack()" class="button  is-danger m-2">Go Back</button>
+    <button (click)='removeFromList(detailedBook.primary_isbn10)' class="button is-warning m-2">Remove</button>
   </div>
   </div>
 </div>

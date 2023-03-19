@@ -1,17 +1,18 @@
 import {Component} from '@angular/core';
-import {ReadingliststateService} from '../readingliststate.service';
+import {LocalService} from '../local.service';
 import {ActivatedRoute} from '@angular/router';
 import {GenreListGeneratorService} from '../genre-search/genre-list-generator.service';
 import {map} from 'rxjs';
 import {Router} from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 
 @Component({selector: 'app-detailedbook', templateUrl: './detailedbook.component.html', styleUrls: ['./detailedbook.component.css']})
 export class DetailedbookComponent {
   detailedBook;
 
-  constructor(private route : ActivatedRoute, private http : GenreListGeneratorService, public readingState : ReadingliststateService, private router : Router) {}
-// On load of component take parameter and obtain additional from Google Books API to load on page
+  constructor(private route : ActivatedRoute, private http : GenreListGeneratorService, public localStore : LocalService, private router : Router) {}
+  // On load of component take parameter and obtain additional from Google Books API to load on page
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.detailedFind(params.get('id'))
@@ -29,20 +30,23 @@ export class DetailedbookComponent {
   }
 
   detailedFind(id) {
-    for (let i = 0; i < this.readingState.readingState.length; i++) {
-      if (this.readingState.readingState[i].primary_isbn10 == id) {
-        this.detailedBook = this.readingState.readingState[i]
+    for (let i = 0; i < this.localStore.readingState.length; i++) {
+      if (this.localStore.readingState[i].primary_isbn10 == id) {
+        this.detailedBook = this.localStore.readingState[i]
       }
     }
   }
 
   removeFromList(id) {
-    for (let i = 0; i < this.readingState.readingState.length; i++) {
-      if (this.readingState.readingState[i].primary_isbn10 === id) {
-        this.readingState.readingState.splice(i, 1)
-        this.readingState.saveToLocalStorage()
+    for (let i = 0; i < this.localStore.readingState.length; i++) {
+      if (this.localStore.readingState[i].primary_isbn10 === id) {
+        this.localStore.readingState.splice(i, 1)
+        this.localStore.saveToLocalStorage(environment.saved, this.localStore.readingState)
         this.router.navigate(['/savedbooks'])
       }
     }
+  }
+  goBack(){
+    this.router.navigate(['/savedbooks'])
   }
 }

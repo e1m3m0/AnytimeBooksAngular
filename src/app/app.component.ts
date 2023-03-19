@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalService } from './local.service';
-import { ReadingliststateService } from './readingliststate.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,23 +10,9 @@ import { ReadingliststateService } from './readingliststate.service';
 export class AppComponent {
   title = 'Anytime Books';
  
-  constructor (private localStore: LocalService, public readingState: ReadingliststateService) {}
+  constructor (private localStore: LocalService) {}
 
   ngOnInit () {
-    // this.localStore.saveData('AnytimeBooksKey', JSON.stringify(this.readingList))
-    this.readingState.readingState = this.localStore.getData('AnytimeBooksKey') 
-    console.log(this.readingState.readingState)
+    this.localStore.readingState = this.localStore.getData(environment.saved) 
    }
-
-
-
-  getReadingList() {
-  
-
-  }
-  testLocal() {
-     
-  }
-
-
 }

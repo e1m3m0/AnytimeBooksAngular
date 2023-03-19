@@ -4,26 +4,36 @@
 >
   <div
     *ngFor="let book of books"
-    class="book-container m-5"
-    >
-    <div class="is-flex-direction-row">
+    class="book-container is-flex is-flex-direction-row m-5 is-align-content-baseline is-justify-content-center is-flex-wrap-wrap column has-text-dark"
+  >
     <img
       class="book-cover is-text-align-center"
-      src="{{book.book_image}}"
-      alt="{{book.title}}'s cover"
+      src="{{ book.book_image }}"
+      alt="{{ book.title }}'s cover"
     />
-    <div class="p-3 title is-full has-text-centered is-capitalized">
-      <h2 class="is-full">{{book.title}}</h2>
+    <div class="p-3 title is-full has-text-centered">
+      <h2 class="is-full title is-4">{{ book.title }}</h2>
     </div>
-    <div class="p-3 author is-full has-text-centered is-capitalized">
-      <h3>{{book.author}}</h3>
+    <div class="p-3 author is-full has-text-centered">
+      <h3 class="is-full title is-5">{{ book.author }}</h3>
     </div>
     <div class="snippet my-5 has-text-centered">
-      <p>{{book.description}}</p>
+      <p class="subtitle is-5">
+        {{ book.description }}
+      </p>
     </div>
-  </div>
-    <div class="is-align-items-self-end">
-    <button *ngIf="!this.readingState.checkStatus(book.primary_isbn10)"(click)="saveBook(book.primary_isbn10)" class="button is-warning">Save Book</button>
-</div>
+    <span [ngSwitch]="this.localStore.checkStatus(book.primary_isbn10)">
+      <img *ngSwitchCase="false"
+      (click)="saveBook(book.primary_isbn10)"
+        class="bookmark saveBook"
+        src="../../assets/images/bookmark.svg"
+        alt="Save book to your list"
+      />
+      <img *ngSwitchCase="true"
+      class="bookmark saveBook"
+      src="../../assets/images/bookmark-saved.svg"
+      alt="Save book to your list"
+    />
+    </span>
   </div>
 </div>

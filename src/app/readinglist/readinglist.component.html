@@ -1,36 +1,31 @@
-<div class="is-full title is-1 has-text-centered pt-3 pb-0">
-  <p> Reading List
-  </p>
-  </div>
-
-<div 
+<div class="is-full title is-1 has-text-centered has-text-success pt-3 pb-0">
+  <p>Reading List</p>
+</div>
+<div
   id="viewSelection"
   class="columns is-centered is-full is-multiline is-flex is-justify-content-center is-flex-direction-row is-flex-wrap-wrap p-5 m-5"
 >
-
-  <div
-    *ngFor="let book of readingList"
-    id="{{book.primary_isbn10}}" 
-    class="book-container is-flex is-flex-direction-row m-5 is-align-content-baseline is-justify-content-center is-flex-wrap-wrap column has-text-dark"
+  <div *ngFor="let book of readingList">
+    <div
+    (click)="reviewBook(book.primary_isbn10)"
+      class="book-container is-flex is-flex-direction-row m-5 is-align-content-baseline is-justify-content-center is-flex-wrap-wrap column has-text-dark"
     >
-    <a [routerLink]="['/book', book.primary_isbn10]" >
-<div>
-  <img
-  class="book-cover is-text-align-center"
-  src="{{book.book_image}}"
-  alt="{{book.title}}'s cover"
-/>
-<div class="p-3 is-full has-text-centered">
-  <h2 class="is-full title is-4">{{book.title | titlecase}}</h2>
-</div>
-<div class="p-3 author is-full has-text-centered is-capitalized">
-  <h3>{{book.author}}</h3>
-</div>
-<div class="snippet my-5 has-text-centered">
-  <p>{{book.description}}</p>
-</div>
-</div>
-</a>
+      <img
+        class="book-cover is-text-align-center"
+        src="{{ book.book_image }}"
+        alt="{{ book.title }}'s cover"
+      />
+      <div class="p-3 title is-full has-text-centered">
+        <h2 class="is-full title is-3">{{ book.title | titlecase }}</h2>
+      </div>
+      <div class="p-3 author is-full has-text-centered">
+        <h3 class="is-full title is-4">{{ book.author }}</h3>
+      </div>
+      <div class="snippet my-5 has-text-centered">
+        <p class="subtitle is-5">
+          {{ book.description }}
+        </p>
+      </div>
+    </div>
   </div>
-
 </div>

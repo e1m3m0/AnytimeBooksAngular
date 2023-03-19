@@ -8,13 +8,14 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
 import { GenreSearchComponent } from './genre-search/genre-search.component';
 import { routingTable } from './routes';
-import { HerosectionComponent } from './genre-search/herosection.component';
+import { HerosectionComponent } from './herosection.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RecommendedBooksComponent } from './recommended-books/recommended-books.component';
 import { ReadinglistComponent } from './readinglist/readinglist.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailedbookComponent } from './detailedbook/detailedbook.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,13 @@ import { DetailedbookComponent } from './detailedbook/detailedbook.component';
     NavbarComponent,
     FooterComponent,
     DetailedbookComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable),
+    BrowserModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }

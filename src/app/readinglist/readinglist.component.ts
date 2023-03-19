@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ReadingliststateService } from '../readingliststate.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { LocalService } from '../local.service';
+
 
 @Component({
   selector: 'app-readinglist',
@@ -9,14 +10,15 @@ import { ReadingliststateService } from '../readingliststate.service';
 })
 export class ReadinglistComponent {
   readingList: any
-  
-  
-  constructor(private activatedRoute:ActivatedRoute, public readingState: ReadingliststateService){}
+   
+  constructor(public localStore: LocalService, private router: Router){}
 
   ngOnInit() {
-    this.readingList = this.readingState.readingState
-  
+      this.readingList = this.localStore.readingState
   }
 
-
+  reviewBook(id) {
+    this.router.navigate(['/book', id])
+  }
+ 
 }
