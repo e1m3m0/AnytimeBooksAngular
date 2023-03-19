@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router'
 
 
+
 import { AppComponent } from './app.component';
 import { GenreSearchComponent } from './genre-search/genre-search.component';
 import { routingTable } from './routes';
@@ -16,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailedbookComponent } from './detailedbook/detailedbook.component';
 import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     DetailedbookComponent,
     HomeComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable)
