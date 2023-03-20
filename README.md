@@ -1,5 +1,7 @@
 # Anytime Books Angular
 
+Anytime Books Angular is a reproduction of Anytime Book using the Angular platform. This reproduction offers the same solutions included on the original product plus a few features.
+
 ## Description
 
 Anytime Books is a solution to book lovers' continuous search for the next read. Our site recommends best sellers based on the reader's genre of choice and allows the reader to save any book of interest, in the list, for easy future access.
@@ -8,12 +10,17 @@ The application provides a simple user interface where users select a genre, fro
 
 The 'Best Seller' book list will change weekly to present the user with the latest best sellers, offering a continued variety of reads.
 
-## Page Link
+## Deployment
 
+Original product:
 https://makispear.github.io/Anytime-Books/
+
+Angular Deployment using Netlify
+https://anytime-books-angular-1445154.netlify.app/
 
 ## Table of Contents
 
+- [Deployment](#deployment)
 - [User/Developer Story](#story)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -21,10 +28,13 @@ https://makispear.github.io/Anytime-Books/
 
 ## Built With
 
+- Angular
 - HTML
 - CSS
 - Bulma CSS Framework
 - Server-side APIs
+  - The New York Time Book API
+  - Google Books API
 - JavaScript
 
 ## Code link
@@ -34,16 +44,16 @@ https://github.com/Makispear/Anytime-Books/
 ## Visuals
 
 Main Page
-![ScreenShot](./src/assets/images/MainPage.png)
+![ScreenShot]()
 
 Books Selected
-![ScreenShot](./src/assets/images/BookSelector.png)
+![ScreenShot]()
 
 Save List
-![ScreenShot](./src/assets/images/SaveList.png)
+![ScreenShot]()
 
 About Page
-![ScreenShot](./src/assets/images/AboutPage.png)
+![ScreenShot]()
 
 ## Story
 
@@ -69,6 +79,8 @@ CRITERIA
   - WHEN I want to review my reading list
     - THEN I can select a tab to view the saved books.
     - THEN I can view information about the books I have saved.
+    - THEN I can view links to sites for purchasing books or reading reviews.
+    - THEN I can remove the book from list if needed.
   - WHEN I want information about Anytime Books or its developers
     - THEN I can use the navigation links to go to an About page.
 
@@ -103,14 +115,18 @@ The current application includes the ability to select from a Best Seller list a
 
 Future features:
 
-- Provide users a way to delete an unwanted book.
-- Provide users a way to mark a book as read.
-- Provide users to links to sites for purchasing books or reading reviews.
+- Provide users a way to mark a book as read or archive list.
 - Provide feedback to other users with a like or dislike entry and count.
 
 ## Credits
 
-Developers:
+Angular Developer:
+
+- Guillermo Mateo
+
+The Angular reproduction used the original product as base for the developement. I took the opportunity to add two of the future features to the build.
+
+Original Project Developers:
 
 - Dafina Gjonbalaj
 - Maki A Maki
