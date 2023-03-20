@@ -15,7 +15,7 @@
       <p>Title: <span class="has-text-weight-bold">{{ detailedBook.title | titlecase }}</span></p>
       <p *ngIf="detailedBook.subtitle">Subtitle: <span class="has-text-weight-bold">{{ detailedBook.subtitle }}</span></p>
       <p>Description: <span class="has-text-weight-bold">{{ detailedBook.description || "Description not available" }}</span></p>
-      <p *ngIf="detailedBook.pageCount !== 0">Pages: <span class="has-text-weight-bold">{{detailedBook.pageCount}} pages</span></p>
+      <p *ngIf="detailedBook.pageCount !== 0">Pages: <span class="has-text-weight-bold">{{detailedBook.pageCount}}</span></p>
       <p>Publisher: <span class="has-text-weight-bold">{{ detailedBook.publisher }}</span></p>
       <p *ngIf="detailedBook.rating">Google Books' Rating: <span class="has-text-weight-bold">{{detailedBook.rating}}</span></p>
 

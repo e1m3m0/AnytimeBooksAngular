@@ -10,6 +10,14 @@ The application provides a simple user interface where users select a genre, fro
 
 The 'Best Seller' book list will change weekly to present the user with the latest best sellers, offering a continued variety of reads.
 
+## Repository link
+Original:
+https://github.com/Makispear/Anytime-Books/
+
+Angular Reproduction:
+https://github.com/e1m3m0/AnytimeBooksAngular
+[![Netlify Status](https://api.netlify.com/api/v1/badges/054ea88e-d124-4cd7-b477-730af3bef09f/deploy-status)](https://app.netlify.com/sites/anytime-books-angular-1445154/deploys)
+
 ## Deployment
 
 Original product:
@@ -37,23 +45,23 @@ https://anytime-books-angular-1445154.netlify.app/
   - Google Books API
 - JavaScript
 
-## Code link
-
-https://github.com/Makispear/Anytime-Books/
-
 ## Visuals
 
 Main Page
-![ScreenShot]()
+
+![ScreenShot](/readme_files/main_page.jpg)
 
 Books Selected
-![ScreenShot]()
+
+![ScreenShot](/readme_files/book_selected.jpg)
 
 Save List
-![ScreenShot]()
 
-About Page
-![ScreenShot]()
+![ScreenShot](/readme_files/reading_list.jpg)
+
+Book Detailed
+
+![ScreenShot](/readme_files/book_detailed.jpg)
 
 ## Story
 
@@ -117,6 +125,7 @@ Future features:
 
 - Provide users a way to mark a book as read or archive list.
 - Provide feedback to other users with a like or dislike entry and count.
+- Provide users the option to create an account and save information on a server, instead of local storage. Making the data accesible from any device.
 
 ## Credits
 
