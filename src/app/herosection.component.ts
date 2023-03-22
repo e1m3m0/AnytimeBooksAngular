@@ -17,6 +17,12 @@ import { Component } from '@angular/core';
     background-repeat: no-repeat;
     height: 350px;
     }
+    @media screen and (max-width: 575px) {
+	#heroSection {
+		background-image: url(/assets/images/HeroMobile.png);
+		background-size: cover
+	}
+}
     `
   ]
 })
